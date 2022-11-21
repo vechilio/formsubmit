@@ -13,15 +13,15 @@
     ></script>
   </head>
   <body>
-    <div class="container">
+<div class="container">
       <span class="big-circle"></span>
       <img src="shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum adipisci recusandae praesentium dicta!
+            Blah Blah Blah Blah Blah Blah Blah Blah. Blah
+            Blah Blah Blah Blah Blah!
           </p>
 
           <div class="info">
@@ -31,7 +31,7 @@
             </div>
             <div class="information">
               <img src="email.png" class="icon" alt="" />
-              <p>lorem@ipsum.com</p>
+              <p>vechilio.site.com@gmail.com</p>
             </div>
             <div class="information">
               <img src="phone.png" class="icon" alt="" />
@@ -69,6 +69,7 @@
             <!-- Disable Captcha -->
             <input type="hidden" name="_captcha" value="false">
 
+            <div class="content">
             <h3 class="title">Contact us </h3>
             <div class="input-container"><i class="uil uil-user name-icon"></i>
               <input type="text" name="name" id="name" class="input" />
@@ -92,7 +93,10 @@
               <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
-          </form>
+           </div> 
+           <div class="cursor"></div>
+           <div class="cursor2"></div>         
+         </form>
         </div>
       </div>
     </div>
@@ -151,6 +155,13 @@
           nameIcon.classList.replace("uil-user-check", "uil-user-times");
           nameIcon.style.color = "#de0611"
       })
+    </script>
+    <script>
+    var cursor = document.querySelector(".cursor");
+    var cursor2 = document.querySelector(".cursor2");
+    document.addEventListener("mousemove",function(e){
+      cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    });
     </script>
   </body>
 </html>
