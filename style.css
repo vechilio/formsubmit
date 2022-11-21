@@ -382,3 +382,27 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
+.email-icon
+{
+  position: absolute;
+  right: 20px;
+  transform: translateY(20%);
+  font-size: 22px;
+  color: #fff;
+}
+.phone-icon
+{
+  position: absolute;
+  right: 20px;
+  transform: translateY(20%);
+  font-size: 22px;
+  color: #fff;
+}
+.name-icon
+{
+  position: absolute;
+  right: 20px;
+  transform: translateY(20%);
+  font-size: 22px;
+  color: #fff;
+}

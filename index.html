@@ -69,18 +69,19 @@
             <!-- Disable Captcha -->
             <input type="hidden" name="_captcha" value="false">
 
-            <h3 class="title">Contact us</h3>
-            <div class="input-container">
+            <h3 class="title">Contact us </h3>
+            <div class="input-container"><i class="uil uil-user name-icon"></i>
               <input type="text" name="name" id="name" class="input" />
               <label for="">Username</label>
               <span>Username</span>
             </div>
-            <div class="input-container">
+            <div class="input-container"><i class="uil uil-envelope email-icon"></i>
               <input type="email" name="email" id="email" class="input" />
               <label for="">Email</label>
               <span>Email</span>
+              
             </div>
-            <div class="input-container">
+            <div class="input-container"><i class="uil uil-phone phone-icon"></i>
               <input type="tel" name="phone" id="phone" class="input" />
               <label for="">Phone</label>
               <span>Phone</span>
@@ -97,5 +98,59 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+      const email = document.getElementById("email")
+      emailIcon = document.querySelector(".email-icon")
+
+      email.addEventListener("keyup", () =>{
+        let patternemail = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if(email.value === ""){
+          emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+          return emailIcon.style.color = "#fff"
+        }
+        if(email.value.match(patternemail)){
+          emailIcon.classList.replace("uil-envelope", "uil-check-circle");
+          return emailIcon.style.color = "greenyellow"
+        }
+          emailIcon.classList.replace("uil-check-circle", "uil-envelope");
+          emailIcon.style.color = "#de0611"
+      })
+      
+      const phone = document.getElementById("phone")
+      phoneIcon = document.querySelector(".phone-icon")
+
+      phone.addEventListener("keyup", () =>{
+        let patternphone = /^[0-9]{7,15}$/;
+
+        if(phone.value === ""){
+          return phoneIcon.style.color = "#fff"
+        }
+        if(phone.value.match(patternphone)){
+          return phoneIcon.style.color = "greenyellow"
+        }
+        phoneIcon.style.color = "#de0611"
+      })
+      const name = document.getElementById("name")
+      nameIcon = document.querySelector(".name-icon")
+
+      name.addEventListener("keyup", () =>{
+        let patternname = /^[a-z]{0,100}$/;
+
+        if(name.value === ""){
+          nameIcon.classList.replace("uil-user-check", "uil-user");
+          nameIcon.classList.replace("uil-user-times", "uil-user");
+          return nameIcon.style.color = "#fff"
+        }
+        if(name.value.match(patternname)){
+          nameIcon.classList.replace("uil-user-times", "uil-user-check");
+          nameIcon.classList.replace("uil-user", "uil-user-check");
+          return nameIcon.style.color = "greenyellow"
+        }
+          nameIcon.classList.replace("uil-user", "uil-user-times");
+          nameIcon.classList.replace("uil-user-check", "uil-user-times");
+          nameIcon.style.color = "#de0611"
+      })
+    </script>
   </body>
 </html>
