@@ -441,11 +441,3 @@ textarea.input {
 .content:hover ~ .cursor2{
   opacity: 0;
 }
-.container .info .information:hover ~ .cursor{
-transform: translate(-50%, -50%) scale(1.5);
-background-color: #c6c6c6;
-opacity: .5;
-}
-.container .info .information:hover ~ .cursor2{
-opacity: 0;
-}
