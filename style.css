@@ -382,7 +382,7 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
-.email-icon
+.contact-form form .email-icon
 {
   position: absolute;
   right: 20px;
@@ -390,7 +390,7 @@ textarea.input {
   font-size: 22px;
   color: #fff;
 }
-.phone-icon
+.contact-form form .phone-icon
 {
   position: absolute;
   right: 20px;
@@ -398,7 +398,7 @@ textarea.input {
   font-size: 22px;
   color: #fff;
 }
-.name-icon
+.contact-form form .name-icon
 {
   position: absolute;
   right: 20px;
